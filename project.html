@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - Érica Torres</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Érica Torres</a>
+            <nav class="nav">
+                <a href="index.html#projects" class="nav-link">Projetos</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="project-page">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Voltar</a>
+            
+            <div class="project-header">
+                <h1 class="project-title" id="projectTitle"></h1>
+                <div class="project-meta">
+                    <p class="project-category" id="projectCategory"></p>
+                    <p class="project-year" id="projectYear"></p>
+                </div>
+                <p class="project-description" id="projectDescription"></p>
+            </div>
+
+            <div class="project-images" id="projectImages">
+                <!-- Imagens serão inseridas via JavaScript -->
+            </div>
+
+            <div class="project-download">
+                <a href="#" class="download-link" id="downloadLink" download>
+                    <span class="download-icon">↓</span>
+                    <span class="download-text">Download do Projeto (PDF)</span>
+                </a>
+            </div>
+
+            <div class="project-navigation">
+                <a href="#" class="nav-project prev-project" id="prevProject">
+                    <span class="nav-label">Anterior</span>
+                    <span class="nav-title" id="prevTitle"></span>
+                </a>
+                <a href="#" class="nav-project next-project" id="nextProject">
+                    <span class="nav-label">Próximo</span>
+                    <span class="nav-title" id="nextTitle"></span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 Érica Torres. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+        <img src="" alt="" class="lightbox-image" id="lightboxImage">
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/project.js"></script>
+</body>
+</html>
