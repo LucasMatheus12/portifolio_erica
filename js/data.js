@@ -76,6 +76,8 @@ const projectsData = [
             'imagens/RENDER_05.jpg',
             'imagens/RENDER_06.jpg',
             'imagens/RENDER_07.jpg',
+            'imagens/RENDER_P1_9.jpg',
+            'imagens/RENDER_P1_10.jpg',
         ]
     },
     {
@@ -94,8 +96,6 @@ const projectsData = [
             'imagens/RENDER_P1_6.png',
             'imagens/RENDER_P1_7.jpg',
             'imagens/RENDER_P1_8.jpg',
-            'imagens/RENDER_P1_9.jpg',
-            'imagens/RENDER_P1_10.jpg',
         ]
     },
     {
