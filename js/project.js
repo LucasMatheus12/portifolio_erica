@@ -24,13 +24,24 @@ function loadProject(projectId) {
     document.getElementById('projectYear').textContent = currentProject.year;
     document.getElementById('projectDescription').textContent = currentProject.description;
     
-    // Carregar link de download se existir
-    const downloadLink = document.getElementById('downloadLink');
+    // Carregar links de download
+    const downloadPdfLink = document.getElementById('downloadPdfLink');
+    const downloadZipLink = document.getElementById('downloadZipLink');
+    
+    // Mostrar/ocultar botão PDF
     if (currentProject.pdfFile) {
-        downloadLink.href = currentProject.pdfFile;
-        downloadLink.style.display = 'inline-flex';
+        downloadPdfLink.href = currentProject.pdfFile;
+        downloadPdfLink.style.display = 'inline-flex';
     } else {
-        downloadLink.style.display = 'none';
+        downloadPdfLink.style.display = 'none';
+    }
+    
+    // Mostrar/ocultar botão ZIP
+    if (currentProject.zipFile) {
+        downloadZipLink.href = currentProject.zipFile;
+        downloadZipLink.style.display = 'inline-flex';
+    } else {
+        downloadZipLink.style.display = 'none';
     }
     
     const projectImages = document.getElementById('projectImages');
@@ -44,13 +55,18 @@ function loadProject(projectId) {
 
 function createImageItem(imageSrc, index) {
     const imageItem = document.createElement('div');
-    imageItem.className = 'project-image-item loading';
+    imageItem.className = 'project-image-item';
     imageItem.dataset.index = index;
     
     const image = document.createElement('img');
     image.src = imageSrc;
     image.alt = `${currentProject.name} - Imagem ${index + 1}`;
     image.className = 'project-image-full';
+    
+    // Remover classe loading quando a imagem carregar
+    image.onload = function() {
+        imageItem.classList.remove('loading');
+    };
     
     imageItem.appendChild(image);
     
