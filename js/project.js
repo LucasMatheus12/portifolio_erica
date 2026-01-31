@@ -27,6 +27,7 @@ function loadProject(projectId) {
     // Carregar links de download
     const downloadPdfLink = document.getElementById('downloadPdfLink');
     const downloadZipLink = document.getElementById('downloadZipLink');
+    const externalLink = document.getElementById('externalLink');
     
     // Mostrar/ocultar botão PDF
     if (currentProject.pdfFile) {
@@ -42,6 +43,14 @@ function loadProject(projectId) {
         downloadZipLink.style.display = 'inline-flex';
     } else {
         downloadZipLink.style.display = 'none';
+    }
+    
+    // Mostrar/ocultar botão Link Externo
+    if (currentProject.externalLink) {
+        externalLink.href = currentProject.externalLink;
+        externalLink.style.display = 'inline-flex';
+    } else {
+        externalLink.style.display = 'none';
     }
     
     const projectImages = document.getElementById('projectImages');

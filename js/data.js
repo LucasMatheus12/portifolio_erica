@@ -24,7 +24,7 @@ const projectsData = [
     },
     {
         id: 3,
-        name: 'Escritório',
+        name: 'Residencial Familiar',
         category: 'Projeto',
         year: '2024',
         thumbnail: 'imagens/projeto3_capa.png',
@@ -141,11 +141,11 @@ const projectsData = [
         name: 'PJ Comercial',
         category: 'Projetos Executivos',
         year: '2024',
-        thumbnail: 'imagens/PJ_COMERCIAL_01.jpg',
+        thumbnail: 'imagens/PJ COMERCIAL_FINAL-01.jpg',
         description: 'Durante o estágio, além das atividades de modelagem tridimensional, foram desenvolvidos projetos executivos no software AutoCAD, com foco na elaboração completa da documentação técnica necessária para execução das obras, conforme apresentado nas pranchas do projeto comercial. Os trabalhos envolveram a produção de plantas baixas, cortes, fachadas, planta de cobertura, planta de situação, quadros de esquadrias, cotagem detalhada, definição de níveis, especificação de materiais e organização das pranchas conforme padrões técnicos e normativos. Todo o processo foi desenvolvido com atenção à precisão gráfica, legibilidade das informações e compatibilização dos elementos construtivos. Essa experiência contribuiu para o fortalecimento das habilidades em desenho técnico, leitura e interpretação de projetos, padronização de layers, controle de escalas e desenvolvimento de projetos executivos voltados às exigências do mercado profissional, ampliando a compreensão sobre as etapas técnicas que antecedem a execução das edificações.',
         images: [
-            'imagens/PJ_COMERCIAL_02.jpg',
-            'imagens/PJ_COMERCIAL_01.jpg',
+            'imagens/PJ COMERCIAL_FINAL-02.jpg',
+            'imagens/PJ COMERCIAL_FINAL-01.jpg',
         ]
     },
     {
@@ -157,6 +157,21 @@ const projectsData = [
         description: 'Este projeto refere-se ao desenvolvimento de um projeto executivo residencial elaborado no software AutoCAD durante o estágio, contemplando a produção completa da documentação técnica necessária para a execução da obra, conforme apresentado no material do projeto. O trabalho envolveu a elaboração das plantas arquitetônicas, cortes, fachada, planta de cobertura, planta de situação, contagem, definição de níveis, especificação de esquadrias e organização das pranchas técnicas, seguindo padrões profissionais e normativos. A maior parte do projeto técnico foi desenvolvida de forma autônoma, demonstrando domínio do processo de detalhamento e responsabilidade na organização das informações. A planta hidrossanitária foi desenvolvida por uma engenheira colaboradora do escritório, sendo posteriormente integrada ao conjunto técnico por meio da compatibilização com a planta arquitetônica elaborada. Esse processo possibilitou o contato direto com o trabalho multidisciplinar, reforçando a importância da colaboração entre as áreas e da correta sobreposição e organização dos projetos complementares. Essa experiência contribuiu para o aprimoramento das habilidades em desenho técnico, compatibilização de projetos, organização de arquivos e desenvolvimento de documentação executiva voltada às exigências do mercado profissional.',
         images: [
             'imagens/PROJETO_DEYN_NOVO.jpg',
+        ]
+    },
+    {
+        id: 13,
+        name: 'Detalhamentos',
+        category: 'Projetos do estágio',
+        year: '2024',
+        thumbnail: 'imagens/EXECUTIVO_FAVO DE MEL_sem dados_d1_page-0002.jpg',
+        description: 'Estes projetos referem-se aos detalhamentos de marcenaria e fachada desenvolvidos ao longo do meu estágio, representando minha evolução técnica e projetual ao longo do período. As atividades envolveram a elaboração de layouts personalizados, detalhamento construtivo de mobiliário sob medida, paginação de materiais, definição de acabamentos e desenvolvimento de fachadas com maior nível de complexidade. Com o passar do tempo, foi possível perceber um avanço significativo no domínio das ferramentas digitais, na organização dos arquivos e na precisão dos desenhos, resultando em soluções mais funcionais, estéticas e alinhadas às demandas profissionais. Esse processo contribuiu diretamente para o aprimoramento do meu desempenho na área de projeto, consolidando habilidades em representação técnica, compatibilização e desenvolvimento executivo.',
+        zipFile: 'zip\detalhamentos.zip', 
+        images: [
+           'imagens/EXECUTIVO_FAVO DE MEL_sem dados_d1_page-0001.jpg',
+           'imagens/EXECUTIVO_FAVO DE MEL_sem dados_d1_page-0002.jpg',
+           'imagens/DET_BANHEIRO 03_QUARTO_sem dados_d2_page-0001.jpg',
+           'imagens/DET_BANHEIRO 03_QUARTO_sem dados_d2_page-0002.jpg',
         ]
     }
 ];
