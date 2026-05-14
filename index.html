@@ -3,58 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Érica Torres - Portfólio</title>
+    <meta name="description" content="Portfólio de Érica Torres — Arquitetura e Urbanismo. Projetos acadêmicos, executivos, 3D e visualização.">
+    <title>Érica Torres — Arquitetura e Urbanismo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Érica Torres</h1>
-            <nav class="nav">
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#projetos" class="nav-link">Projetos</a>
-                <a href="#contato" class="nav-link">Contato</a>
+    <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+
+    <header class="site-header" id="top" data-header>
+        <div class="site-header__inner container">
+            <a href="#inicio" class="site-logo" data-smooth>Érica Torres</a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menu">
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+            </button>
+            <nav class="site-nav" id="siteNav" aria-label="Principal">
+                <ul class="site-nav__list">
+                    <li><a href="#inicio" class="site-nav__link" data-smooth>Início</a></li>
+                    <li><a href="#sobre" class="site-nav__link" data-smooth>Sobre</a></li>
+                    <li><a href="#projetos" class="site-nav__link" data-smooth>Projetos</a></li>
+                    <li><a href="#servicos" class="site-nav__link" data-smooth>Serviços</a></li>
+                    <li><a href="#diferenciais" class="site-nav__link" data-smooth>Programas</a></li>
+                    <li><a href="#contato" class="site-nav__link" data-smooth>Contato</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="sobre" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <p class="hero-greeting">Olá, eu sou</p>
-                    <h2 class="hero-name">Érica Torres</h2>
-                    <p class="hero-description">
-                        Estudante de Arquitetura e Urbanismo apaixonada por criar espaços que transformam a maneira como vivemos e nos relacionamos com o ambiente. Meu trabalho explora a intersecção entre funcionalidade, estética e sustentabilidade, buscando soluções inovadoras que respondem às necessidades humanas e respeitam o meio ambiente.
+        <section id="inicio" class="hero hero--editorial" aria-labelledby="hero-title">
+            <div class="hero__bg" aria-hidden="true"></div>
+            <div class="hero__inner container">
+                <div class="hero__text">
+                    <p class="hero__eyebrow reveal">Portfólio Acadêmico e Autoral</p>
+                    <h1 id="hero-title" class="hero__title reveal reveal--delay-1">Érica Torres</h1>
+                    <p class="hero__subtitle reveal reveal--delay-2">Estudante de Arquitetura e Urbanismo</p>
+                    <p class="hero__desc reveal reveal--delay-2">
+                        Projetos acadêmicos e estudos arquitetônicos desenvolvidos com foco em funcionalidade, estética, representação técnica e sensibilidade ao contexto.
                     </p>
-                    <a href="#projetos" class="hero-cta">Ver Projetos →</a>
+                    <div class="hero__actions reveal reveal--delay-3">
+                        <a href="#projetos" class="btn btn--primary btn--sm" data-smooth>Ver Projetos</a>
+                        <a href="#" class="btn btn--outline-dark btn--sm" id="heroWhatsapp" rel="noopener noreferrer" target="_blank">Falar no WhatsApp</a>
+                    </div>
+                </div>
+                <div class="hero__visual reveal reveal--delay-1">
+                    <div class="hero__collage">
+                        <figure class="hero__frame hero__frame--main">
+                            <img
+                                src="imagens/RENDER_01.jpg"
+                                alt="Renderização arquitetônica — trabalho acadêmico em Lumion"
+                                class="hero__img hero__img--cover"
+                                width="1200"
+                                height="900"
+                                loading="eager"
+                                decoding="async">
+                        </figure>
+                        <figure class="hero__frame hero__frame--accent">
+                            <img
+                                src="imagens/projeto2_plantas.jpg"
+                                alt="Plantas e prancha técnica — Projeto DAC II"
+                                class="hero__img hero__img--contain"
+                                width="900"
+                                height="700"
+                                loading="eager"
+                                decoding="async">
+                        </figure>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section id="projetos" class="projects">
-            <div class="projects-carousel-list" id="projectsGrid">
-                <!-- Carrosséis serão inseridos via JavaScript -->
-            </div>
-        </section>
-
-        <section id="contato" class="contact">
+        <section id="sobre" class="section about" aria-labelledby="sobre-title">
             <div class="container">
-                <h2 class="section-title">Contato</h2>
-                <div class="contact-info">
-                    <a href="mailto:ericatorres3225@gmail.com" class="contact-link">ericatorres3225@gmail.com</a>
+                <header class="section__head section__head--split reveal">
+                    <div>
+                        <p class="section__kicker">Sobre</p>
+                        <h2 id="sobre-title" class="section__title">Trajetória e visão</h2>
+                    </div>
+                    <p class="section__lead" id="aboutLead"></p>
+                </header>
+                <div class="about__grid">
+                    <figure class="about__figure reveal">
+                        <img src="imagens/erica-sobre.png" alt="Érica Torres em ambiente de trabalho com materiais de projeto" class="about__img" width="720" height="900" loading="lazy">
+                    </figure>
+                    <div class="about__body">
+                        <div class="about__text reveal">
+                            <p id="aboutText1"></p>
+                            <p id="aboutText2"></p>
+                        </div>
+                        <ul class="about__highlights" aria-label="Destaques">
+                            <li class="about__highlight reveal">
+                                <span class="about__highlight-label">Portfólio</span>
+                                <span class="about__highlight-text">Projetos acadêmicos, urbanos, paisagísticos, 3D e executivos</span>
+                            </li>
+                            <li class="about__highlight reveal">
+                                <span class="about__highlight-label">Soluções</span>
+                                <span class="about__highlight-text">Funcionais e estéticas, com foco em arquitetura humanizada</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="section section--sand services" aria-labelledby="servicos-title">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="section__kicker">Serviços</p>
+                    <h2 id="servicos-title" class="section__title">Como posso ajudar</h2>
+                    <p class="section__subtitle">Escopo sob medida, da ideia à documentação que o canteiro precisa.</p>
+                </header>
+                <div class="services__grid" id="servicesGrid"></div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section portfolio" aria-labelledby="projetos-title">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="section__kicker">Portfólio</p>
+                    <h2 id="projetos-title" class="section__title">Projetos selecionados</h2>
+                    <p class="section__subtitle">Uma curadoria editorial dos trabalhos já publicados — clique para ver detalhes e galeria.</p>
+                </header>
+                <div class="portfolio__filters reveal" id="portfolioFilters" role="tablist" aria-label="Filtrar por categoria"></div>
+                <div class="portfolio__grid" id="portfolioGrid"></div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="section section--dark differentials" aria-labelledby="diferenciais-title">
+            <div class="container">
+                <header class="section__head section__head--light reveal">
+                    <p class="section__kicker">Domínio técnico</p>
+                    <h2 id="diferenciais-title" class="section__title">Programas</h2>
+                    <p class="section__subtitle section__subtitle--muted">Ferramentas utilizadas na formação e no desenvolvimento dos projetos deste portfólio.</p>
+                </header>
+                <ul class="programs-grid" id="differentialsGrid" role="list" aria-label="Programas e níveis de domínio"></ul>
+            </div>
+        </section>
+
+        <section class="section cta-block" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-block__inner reveal">
+                    <h2 id="cta-title" class="cta-block__title">Vamos transformar seu espaço em um projeto único?</h2>
+                    <p class="cta-block__text">Conte brevemente sua ideia ou envie referências — retorno ágil para alinharmos próximos passos.</p>
+                    <div class="cta-block__actions">
+                        <a href="#" class="btn btn--primary" id="ctaWhatsapp" rel="noopener noreferrer" target="_blank">Falar no WhatsApp</a>
+                        <a href="#" class="btn btn--line" id="ctaEmail">Enviar e-mail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section section--sand contact" aria-labelledby="contato-title">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="section__kicker">Contato</p>
+                    <h2 id="contato-title" class="section__title">Vamos conversar</h2>
+                    
+                </header>
+                <ul class="contact__list" id="contactList"></ul>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">© 2026 Érica Torres. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p class="site-footer__brand">Érica Torres</p>
+            <p class="site-footer__copy" id="footerYear"></p>
         </div>
     </footer>
 
     <script src="js/data.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

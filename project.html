@@ -3,82 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto - Érica Torres</title>
+    <meta name="description" content="Detalhe do projeto — Érica Torres">
+    <title>Projeto — Érica Torres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Érica Torres</h1>
-            <nav class="nav">
-                <a href="index.html#sobre" class="nav-link">Sobre</a>
-                <a href="index.html#projetos" class="nav-link">Projetos</a>
-                <a href="index.html#contato" class="nav-link">Contato</a>
+<body class="page-project">
+    <a class="skip-link" href="#projectMain">Ir para o conteúdo</a>
+
+    <header class="site-header site-header--solid" data-header>
+        <div class="site-header__inner container">
+            <a href="index.html#inicio" class="site-logo">Érica Torres</a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menu">
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+            </button>
+            <nav class="site-nav" id="siteNav" aria-label="Principal">
+                <ul class="site-nav__list">
+                    <li><a href="index.html#inicio" class="site-nav__link">Início</a></li>
+                    <li><a href="index.html#sobre" class="site-nav__link">Sobre</a></li>
+                    <li><a href="index.html#projetos" class="site-nav__link">Projetos</a></li>
+                    <li><a href="index.html#servicos" class="site-nav__link">Serviços</a></li>
+                    <li><a href="index.html#diferenciais" class="site-nav__link">Programas</a></li>
+                    <li><a href="index.html#contato" class="site-nav__link">Contato</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main class="project-page">
+    <main class="project-page" id="projectMain">
         <div class="container">
-            <a href="index.html#projects" class="back-link">← Voltar</a>
-            
-            <div class="project-header">
+            <a href="index.html#projetos" class="back-link">← Voltar ao portfólio</a>
+
+            <header class="project-header reveal is-visible">
                 <h1 class="project-title" id="projectTitle"></h1>
                 <div class="project-meta">
-                    <p class="project-category" id="projectCategory"></p>
-                    <p class="project-year" id="projectYear"></p>
+                    <p class="project-meta__item" id="projectCategory"></p>
+                    <span class="project-meta__dot" aria-hidden="true"></span>
+                    <p class="project-meta__item" id="projectYear"></p>
                 </div>
                 <p class="project-description" id="projectDescription"></p>
-            </div>
+            </header>
 
-            <div class="project-images" id="projectImages">
-                <!-- Imagens serão inseridas via JavaScript -->
-            </div>
+            <div class="project-gallery" id="projectImages" aria-label="Galeria de imagens do projeto"></div>
 
             <div class="project-download">
                 <div class="download-buttons">
                     <a href="#" class="download-link" id="downloadPdfLink" download>
-                        <span class="download-icon">↓</span>
+                        <span class="download-icon" aria-hidden="true">↓</span>
                         <span class="download-text">Download PDF</span>
                     </a>
                     <a href="#" class="download-link" id="downloadZipLink" download>
-                        <span class="download-icon">↓</span>
+                        <span class="download-icon" aria-hidden="true">↓</span>
                         <span class="download-text">Download arquivos (ZIP)</span>
                     </a>
                     <a href="#" class="download-link" id="externalLink" target="_blank" rel="noopener noreferrer">
-                        <span class="download-icon">→</span>
-                        <span class="download-text">Ver Pasta Externa</span>
+                        <span class="download-icon" aria-hidden="true">→</span>
+                        <span class="download-text">Ver pasta externa</span>
                     </a>
                 </div>
             </div>
 
-            <div class="project-navigation">
-                <a href="#" class="nav-project prev-project" id="prevProject">
+            <nav class="project-navigation" aria-label="Navegação entre projetos">
+                <a href="#" class="nav-project nav-project--prev" id="prevProject">
                     <span class="nav-label">Anterior</span>
                     <span class="nav-title" id="prevTitle"></span>
                 </a>
-                <a href="#" class="nav-project next-project" id="nextProject">
+                <a href="#" class="nav-project nav-project--next" id="nextProject">
                     <span class="nav-label">Próximo</span>
                     <span class="nav-title" id="nextTitle"></span>
                 </a>
-            </div>
+            </nav>
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">© 2026 Érica Torres. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p class="site-footer__brand">Érica Torres</p>
+            <p class="site-footer__copy">© 2026 Érica Torres</p>
         </div>
     </footer>
 
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
-        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-        <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Imagem anterior">‹</button>
+        <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Próxima imagem">›</button>
         <img src="" alt="" class="lightbox-image" id="lightboxImage">
     </div>
 
     <script src="js/data.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/project-page.js"></script>
     <script src="js/project.js"></script>
 </body>
 </html>

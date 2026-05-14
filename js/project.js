@@ -3,11 +3,12 @@ let currentImageIndex = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const projectId = parseInt(urlParams.get('id'));
+    const projectId = parseInt(urlParams.get('id'), 10);
     
     if (projectId) {
         loadProject(projectId);
-        initLightbox();
+    } else {
+        window.location.href = 'index.html#projetos';
     }
 });
 
@@ -15,7 +16,7 @@ function loadProject(projectId) {
     currentProject = projectsData.find(p => p.id === projectId);
     
     if (!currentProject) {
-        window.location.href = 'index.html';
+        window.location.href = 'index.html#projetos';
         return;
     }
     
@@ -60,17 +61,20 @@ function loadProject(projectId) {
     });
     
     setupNavigation(projectId);
+    initLightbox();
 }
 
 function createImageItem(imageSrc, index) {
     const imageItem = document.createElement('div');
-    imageItem.className = 'project-image-item';
+    imageItem.className = 'project-gallery__item loading';
     imageItem.dataset.index = index;
     
     const image = document.createElement('img');
     image.src = imageSrc;
     image.alt = `${currentProject.name} - Imagem ${index + 1}`;
-    image.className = 'project-image-full';
+    image.className = 'project-gallery__img';
+    image.loading = 'lazy';
+    image.decoding = 'async';
     
     // Remover classe loading quando a imagem carregar
     image.onload = function() {

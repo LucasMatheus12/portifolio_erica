@@ -24,7 +24,7 @@ const projectsData = [
     },
     {
         id: 3,
-        name: 'Residencial Familiar',
+        name: 'Projeto 1',
         category: 'Projeto',
         year: '2024',
         thumbnail: 'imagens/projeto3_capa.png',
@@ -166,7 +166,7 @@ const projectsData = [
         year: '2024',
         thumbnail: 'imagens/EXECUTIVO_FAVO DE MEL_sem dados_d1_page-0002.jpg',
         description: 'Estes projetos referem-se aos detalhamentos de marcenaria e fachada desenvolvidos ao longo do meu estágio, representando minha evolução técnica e projetual ao longo do período. As atividades envolveram a elaboração de layouts personalizados, detalhamento construtivo de mobiliário sob medida, paginação de materiais, definição de acabamentos e desenvolvimento de fachadas com maior nível de complexidade. Com o passar do tempo, foi possível perceber um avanço significativo no domínio das ferramentas digitais, na organização dos arquivos e na precisão dos desenhos, resultando em soluções mais funcionais, estéticas e alinhadas às demandas profissionais. Esse processo contribuiu diretamente para o aprimoramento do meu desempenho na área de projeto, consolidando habilidades em representação técnica, compatibilização e desenvolvimento executivo.',
-        zipFile: 'zip\detalhamentos.zip', 
+        zipFile: 'zip/detalhamentos.zip',
         images: [
            'imagens/EXECUTIVO_FAVO DE MEL_sem dados_d1_page-0001.jpg',
            'imagens/EXECUTIVO_FAVO DE MEL_sem dados_d1_page-0002.jpg',
